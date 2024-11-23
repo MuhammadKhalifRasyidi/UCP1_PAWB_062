@@ -1,4 +1,5 @@
 const { get } = require("http");
+const { password } = require("../configs/database");
 
 module.exports ={
     home(req,res){
@@ -12,7 +13,7 @@ module.exports ={
             // Render halaman home dengan data pengguna
             res.render('home', {
                 username: req.session.username,
-                userid: req.session.userid
+                password: req.session.password
             });
         } else {
             // Jika belum login, arahkan ke halaman login

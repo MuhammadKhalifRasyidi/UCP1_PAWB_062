@@ -34,7 +34,7 @@ pool.on('error',(err)=> {
                     } else {
                         req.flash('color', 'danger');
                         req.flash('status', 'Oops..');
-                        req.flash('message', 'Akun tidak ditemukan');
+                        req.flash('message', 'Maaf, akun tidak ditemukan');
                         res.redirect('/login');
                     }
                 });
