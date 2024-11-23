@@ -19,4 +19,4 @@ CREATE TABLE `CatatanBibit` (
 INSERT INTO `CatatanPupuk` (`namaPetani`, `lokasiLahan`, `luasLahan`,`jenisTanaman`) VALUES
 ('roy', 'sleman', '1 hektar', 'tanaman orang');
 
-DROP TABLE IF EXISTS CatatanPupuk;
+DROP TABLE IF EXISTS users;
