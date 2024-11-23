@@ -1,28 +1,20 @@
-CREATE TABLE `users` (
+CREATE TABLE `CatatanPupuk` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(50) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `password` text DEFAULT NULL,  
+  `namePetani` varchar(50) DEFAULT NULL,
+  `lokasiLahan` varchar(50) DEFAULT NULL,
+  `luasLahan` VARCHAR(11) DEFAULT NULL,  
+  `jenisTanaman` text DEFAULT NULL,  
   PRIMARY KEY (`id`)
-);
+);namePetani, lokasiLahan, luasLahan, jenisTanaman
 
-CREATE TABLE `PetaniPupuk` (
+CREATE TABLE `CatatanBibit` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `phone` VARCHAR(11) DEFAULT NULL,  
-  `address` text DEFAULT NULL,  
+  `namePetani` varchar(50) DEFAULT NULL,
+  `lokasiLahan` varchar(50) DEFAULT NULL,
+  `luasLahan` VARCHAR(11) DEFAULT NULL,  
+  `jenisTanaman` text DEFAULT NULL,  
   PRIMARY KEY (`id`)
-);name, email, phone, address
-
-CREATE TABLE `PetaniBibit` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `phone` VARCHAR(11) DEFAULT NULL,  
-  `address` text DEFAULT NULL,  
-  PRIMARY KEY (`id`)
-);name, email, phone, address
+);namePetani, lokasiLahan, luasLahan, jenisTanaman
 
 INSERT INTO `users` (`nama`, `email`, `password`) VALUES
 ('narji', 'narji@maul.com', 'narji123');

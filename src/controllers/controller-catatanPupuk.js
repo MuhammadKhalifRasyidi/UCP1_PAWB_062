@@ -17,12 +17,12 @@ module.exports ={
                 // Check if results contains any data
                 if (results.length > 0) {
                     res.render('CatatanPupuk', {
-                        url: 'http://localhost:5050/',
+                        url: 'http://localhost:3000/',
                         catatanPupuk: results // Pass the contacts data to the view
                     });
                 } else {
                     res.render('CatatanPupuk', {
-                        url: 'http://localhost:5050/',
+                        url: 'http://localhost:3000/',
                         catatanPupuk: [] // Pass an empty array if no data
                     });
                 }
@@ -32,7 +32,7 @@ module.exports ={
     },
     formCatatanPupuk(req,res){
         res.render("addCatatanPupuk",{
-            url : 'http://localhost:5050/',
+            url : 'http://localhost:3000/',
         });
     },
     saveCatatanPupuk(req, res) {
@@ -70,7 +70,7 @@ module.exports ={
                 if (error) throw error;
                 if (results.length > 0) {
                     res.render('editCatatanPupuk', {
-                        url: 'http://localhost:5050/',
+                        url: 'http://localhost:3000/',
                         catatanPupuk: results[0]
                     });
                 } else {

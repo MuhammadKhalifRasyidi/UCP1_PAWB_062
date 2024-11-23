@@ -7,10 +7,10 @@ pool.on('error',(err)=> {
     console.error(err);
 });
 
-module.exports ={
+ module.exports ={
     login(req,res){
         res.render("login",{
-            url : 'http://localhost:5050/',
+            url : 'http://localhost:3000/',
             colorFlash: req.flash('color'),
             statusFlash: req.flash('status'),
             pesanFlash: req.flash('message'),
@@ -50,7 +50,6 @@ module.exports ={
             if(err) {
                 return console.log(err);
             }
-            res.clearCookie('secretname');
             res.redirect('/login');
         });
     },

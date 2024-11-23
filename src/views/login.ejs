@@ -16,7 +16,7 @@
 <body style="padding: 0px !important;">
 	<div class="container h-100">
 		<div class="row h-100 justify-content-center align-items-center">
-			<form action="<%= url %>login/auth" method="POST" class="col-md-4 card">
+			<form action="http://localhost:3000/login/auth" method="POST" class="col-md-4 card">
 				
 				<h2>Login</h2>
 				<div class="form-group">
@@ -29,7 +29,6 @@
 				</div>
 
                 <button type="submit" class="btn btn-primary">Login</button>
-				<a href="<%= url %>register" class="btn btn-success">Register</a>
 				
 				<%if (pesanFlash) { %>
 					<div class="alert alert-<%= colorFlash %> alert-dismissible fade show mt-3" role="alert">

@@ -10,11 +10,13 @@ const app = express();
 const loginRoutes = require("./src/routes/router-login");
 const bibitRoutes = require("./src/routes/router-bibit");
 const pupuktRoutes = require("./src/routes/router-pupuk");
-const appRoutes = require("./src/routes/router-home");
+const homeRoutes = require("./src/routes/router-home");
 
 // Configurasi library session
 app.use(
   session({
+    secret: 'secret',
+    name: "secretname",
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -38,6 +40,7 @@ app.use(function (req, res, next) {
   next();
 });
 
+
 // Setting folder views
 app.set("views", path.join(__dirname, "src/views"));
 app.set("view engine", "ejs");
@@ -46,11 +49,11 @@ app.set("view engine", "ejs");
 app.use("/login", loginRoutes);
 app.use("/bibit", bibitRoutes);
 app.use("/pupuk", pupuktRoutes);
-app.use("/", appRoutes);
+app.use("/", homeRoutes);
 
 console.log(app._router.stack);
 
 // Gunakan port server
-app.listen(5050, () => {
-  console.log("Server Berjalan di Port : " + 5050);
+app.listen(3000, () => {
+  console.log("Server Berjalan di Port : " + 3000);
 });

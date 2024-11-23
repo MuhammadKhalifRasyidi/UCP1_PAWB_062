@@ -17,12 +17,12 @@ module.exports ={
                 // Check if results contains any data
                 if (results.length > 0) {
                     res.render('CatatanBibit', {
-                        url: 'http://localhost:5050/',
+                        url: 'http://localhost:3000/',
                         catatanBibit: results // Pass the contacts data to the view
                     });
                 } else {
                     res.render('CatatanBibit', {
-                        url: 'http://localhost:5050/',
+                        url: 'http://localhost:3000/',
                         catatanBibit: [] // Pass an empty array if no data
                     });
                 }
@@ -32,7 +32,7 @@ module.exports ={
     },
     formCatatanBibit(req,res){
         res.render("addCatatanBibit",{
-            url : 'http://localhost:5050/',
+            url : 'http://localhost:3000/',
         });
     },
     saveCatatanBibit(req, res) {
@@ -70,7 +70,7 @@ module.exports ={
                 if (error) throw error;
                 if (results.length > 0) {
                     res.render('editCatatanBibit', {
-                        url: 'http://localhost:5050/',
+                        url: 'http://localhost:3000/',
                         catatanBibit: results[0]
                     });
                 } else {

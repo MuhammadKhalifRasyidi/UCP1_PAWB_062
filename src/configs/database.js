@@ -2,6 +2,6 @@ module.exports = {
     multipleStatements  : true,
     host                : 'localhost',
     user                : 'root',
-    password            : 'jeko1099',
+    password            : '',
     database            : 'ucp1_pawb_db'
 };
